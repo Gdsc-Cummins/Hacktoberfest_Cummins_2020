@@ -47,7 +47,7 @@
             height: 100%;
             /* background-color: yellow; */
             padding: 2% 25%;
-            /* padding-left: 25%;
+            /* padding-top: 25%;
           paddi */
         }
 
@@ -59,6 +59,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            /* padding-top: 5%; */
         }
 
         #section4 {
@@ -107,18 +108,22 @@
             padding: 1rem;
         }
 
-        @media all and (max-width: 800px) {
+        @media screen and (max-width: 720px) {
             h1 {
                 font-size: 1.5rem;
             }
 
-            li {
-                font-size: 1.125rem;
+            .container li {
+                font-size: 0.525rem;
             }
 
             li span {
-                font-size: 3.375rem;
+                font-size: 2.375rem;
             }
+            li{
+                font-size: 0.825rem;
+            }
+           
         }
 
         /* ---------------------TIMELINE---------------------- */
@@ -208,7 +213,7 @@
         }
 
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 720px) {
             .container:before {
                 left: 8px;
                 width: 2px;
@@ -227,10 +232,11 @@
                 float: none;
                 direction: ltr;
             }
+            img{
+                width: 35%;
+            }
         }
 
-
-        /*----------------------------- SLIDESHOW --------------*/
 
         /*----------- FOOTER---------------*/
         .site-footer {
@@ -279,39 +285,70 @@
             background-color: #A931AC;
             color: white;
         }
+
+
+        /* ------------------ */
+        .panel-body
+        {
+            font-family: 'Baloo Tammudu 2', cursive;
+             font-size: 18px;
+             color:#737373;
+        }
+        .panel-title{
+            font-family: 'Baloo Tammudu 2', cursive;
+        }
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a href="https://hacktoberfest.digitalocean.com/">
-            <img src="images/hack2020.png" width="50%" height="auto" style=" margin-left: 5%;">
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+
+  <!-- Navbar brand -->
+    <img src="images/Picture1.png" width="15%" height="auto" style=" margin-left: 5%; margin-right: 5%;"> 
+    
+    
+  <!-- Collapse button -->
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation" >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="#section2">About
         </a>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">Time Line</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section4">FAQs</a>
+      </li>
+      
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#section2">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#section3">Time Line </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#section4">FAQs </a>
-                </li>
+    </ul>
+    <!-- Links -->
 
-            </ul>
-        </div>
-    </nav>
+  </div>
+  <!-- Collapsible content -->
+  
+</nav>
+<!--/.Navbar-->
+
 
 
     <div class="main" id="section1">
 
         <a href="#section2"></a>
         <br /><br />
-        <div class="container">
+        <div class="container" style="margin-top: 15%;">
             <h1 id="headline">Time Left:</h1>
             <div id="countdown">
                 <ul>
@@ -322,7 +359,7 @@
                 </ul>
             </div>
             <div class="message">
-                <div id="content">Started</div>
+                <div id="content">Event Has Started</div>
             </div>
         </div>
         <a href="https://organize.mlh.io/participants/events/4205-hacktoberfest-ccoew" target="_blank" rel="noopener noreferrer">
@@ -330,6 +367,9 @@
                 <button type="button" class="btn btn1">Log in & Register</button>
             </div>
         </a>
+        
+        <!-- <center><a href="#section2"><i class="fa fa-chevron-down" style="font-size:24px"></i> </a>
+        </center> -->
 
     </div>
     <!-- -----------------------     ABOUT ----------------------------  -->
@@ -354,34 +394,22 @@
         </center>
     </div>
 
-
+    <h2 style="padding: 2% 25%">Events</h2>
     <!-- -----------------------     Time Line ----------------------------  -->
     <div class="main" id="section3">
-        <h2 style="padding: 2% 25%; color: #ffffff">Events</h2>
+       
         <div class="container12">
 
-            <div class="timeline-block timeline-block-right">
-                <div class="marker"></div>
-                <div class="timeline-content">
-                    <h3>OCTOBER <h1>11</h1>
-                    </h3>
-                    <span>10:00-10:30</span>
-                    <a
-                        href="" target="_blank">
-                        <h5>Welcome</h5>
-                    </a>
-                </div>
-            </div>
 
             <div class="timeline-block timeline-block-left">
                 <div class="marker"></div>
                 <div class="timeline-content">
                     <h3>OCTOBER <h1>11</h1>
                     </h3>
-                    <span>10:30-11:00</span>
+                    <span>10:00-01:00</span>
                     <a
                         href="" target="_blank">
-                        <h5>Networking</h5>
+                        <h5>Hacktoberfest</h5>
                     </a>
                 </div>
             </div>
@@ -389,12 +417,35 @@
             <div class="timeline-block timeline-block-right">
                 <div class="marker"></div>
                 <div class="timeline-content">
-                    <h3>OCTOBER <h1>11</h1>
+                    <h3>OCTOBER <h1>12</h1>
                     </h3>
                     <span> 12:00-13:00</span>
                     <a
                         href="" target="_blank">
-                        <h5>Hacktoberfest & Opensource Introduction </p>
+                        <h5>ML Cloud Workshop (GCloud) Day 1 </p>
+                    </a>
+                </div>
+            </div>
+            <div class="timeline-block timeline-block-left">
+                <div class="marker"></div>
+                <div class="timeline-content">
+                    <h3>OCTOBER <h1>13</h1>
+                    </h3>
+                    <span> 10:00-11:00</span>
+                    <a href="" target="_blank">
+                        <h5> ML Cloud Workshop (GCloud) Day 2 </h5>
+                    </a>
+                </div>
+            </div>
+            <div class="timeline-block timeline-block-right">
+                <div class="marker"></div>
+                <div class="timeline-content">
+                    <h3>OCTOBER <h1>14</h1>
+                    </h3>
+                    <span>10:00-03:00</span>
+                    <a
+                        href="" target="_blank">
+                        <h5> Hacktoberfest </p>
                     </a>
                 </div>
             </div>
@@ -402,36 +453,12 @@
             <div class="timeline-block timeline-block-left">
                 <div class="marker"></div>
                 <div class="timeline-content">
-                    <h3>OCTOBER <h1>12</h1>
-                    </h3>
-                    <span> 10:00-11:00</span>
-                    <a href="" target="_blank">
-                        <h5>Hacktoberfest Workshop- Introduction to git & github</h5>
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-block timeline-block-right">
-                <div class="marker"></div>
-                <div class="timeline-content">
-                    <h3>OCTOBER <h1>12</h1>
+                    <h3>OCTOBER <h1>15</h1>
                     </h3>
                     <span>11:00-12:00</span>
                     <a
                         href="" target="_blank">
-                        <h5> Project Demos by DSC team </p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-block timeline-block-left">
-                <div class="marker"></div>
-                <div class="timeline-content">
-                    <h3>OCTOBER <h1>12</h1>
-                    </h3>
-                    <span> 12:00-13:00</span>
-                    <a href="" target="_blank">
-                        <h5>Networking- form Groups</h5>
+                        <h5> Cloud Workshop (GCloud) Day 1 </p>
                     </a>
                 </div>
             </div>
@@ -439,26 +466,16 @@
             <div class="timeline-block timeline-block-right">
                 <div class="marker"></div>
                 <div class="timeline-content">
-                    <h3>OCTOBER <h1>12</h1>
+                    <h3>OCTOBER <h1>16</h1>
                     </h3>
-                    <span>13:00-14:00</span>
+                    <span> 12:00-13:00</span>
                     <a href="" target="_blank">
-                        <h5> Get Hacking!</h5>
+                        <h5>Cloud Workshop (GCloud) Day 2</h5>
                     </a>
                 </div>
             </div>
 
-            <div class="timeline-block timeline-block-left">
-                <div class="marker"></div>
-                <div class="timeline-content">
-                    <h3>OCTOBER <h1>12</h1>
-                    </h3>
-                    <span> 14:00-15:00</span>
-                    <a href="" target="_blank">
-                        <h5>Show & Tell by All</h5>
-                    </a>
-                </div>
-            </div>
+           
         </div>
     </div>
 
@@ -469,7 +486,7 @@
 
     <!-- -----------------------     FAQ    ----------------------------  -->
     <div class="main" id="section4">
-        <h2>FAQs</h2>
+        <h2>FAQs</h2><br><br>
         <div class="panel-group" id="accordion">
             <!-- Q1 -->
             <div class="panel panel-default">
@@ -670,7 +687,7 @@
 
 </body>
 
-<footer class="site-footer" style="padding-left: 10%; padding-right: 10%;">
+<footer class="site-footer" style="padding-left: 10%; padding-right: 10%; font-family: 'Baloo Tammudu 2', cursive;">
     <div class="footer">
         <h4>Get connected with us on social networks!
         
